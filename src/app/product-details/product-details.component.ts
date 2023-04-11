@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Product, products } from "../products";
 import { CartService } from "../cart.service";
@@ -8,7 +8,7 @@ import { CartService } from "../cart.service";
   templateUrl: "./product-details.component.html",
   styleUrls: ["./product-details.component.css"],
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;
   constructor(
     private route: ActivatedRoute,
